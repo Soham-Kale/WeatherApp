@@ -27,22 +27,6 @@ const FavoriteButton = ({ data }: FavoriteButtonProps) => {
     }
   };
 
-  // const handleToggleFavorite = (e: React.MouseEvent) => {
-  //   e.stopPropagation();
-  //   if (isCurrentlyFavorite) {
-  //     removeFavorite.mutate(`${data.coord.lat}-${data.coord.lon}`);
-  //     toast.error(`Removed ${data.name} from Favorites`);
-  //   } else {
-  //     addFavorite.mutate({
-  //       name: data.name,
-  //       lat: data.coord.lat,
-  //       lon: data.coord.lon,
-  //       country: data.sys.country,
-  //     });
-  //     toast.success(`Added ${data.name} to Favorites`);
-  //   }
-  // };
-
   return (
     <Button
       variant={isCurrentlyFavorite ? "default" : "outline"}

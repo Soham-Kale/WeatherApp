@@ -76,6 +76,12 @@ const WeatherDashboard = () => {
         country: "",
     };
 
+    // const location: { name: string; state: string; country: string } = {
+    //     name: params.cityName || "Unknown",
+    //     state: params.state || "Unknown",
+    //     country: weatherQuery.data?.sys?.country || "Unknown",
+    // };
+
     if (!weatherQuery.data || !forecastQuery.data) {
         return (
             <Alert variant="destructive">

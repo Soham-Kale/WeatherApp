@@ -4,7 +4,12 @@ import { ArrowDown, ArrowUp, Droplets, Wind } from "lucide-react";
 
 interface CurrentWeatherProps {
     data: WeatherData;
-    locationName: GeocodingResponse | string;
+    // locationName: GeocodingResponse | string;
+    locationName: GeocodingResponse | { name: string; state?: string; country: string }; // Updated type
+    // params: {
+    //     cityName: string;
+    // };
+    
 }
 
 const CurrentWeather = ({ data, locationName }: CurrentWeatherProps) => {
@@ -64,7 +69,8 @@ const CurrentWeather = ({ data, locationName }: CurrentWeatherProps) => {
                             </p>
                             <div className="space-y-1">
                                 <p className="text-sm font-medium text-muted-foreground">
-                                    Feels like {formatTemp(temp)}
+                                    Feels like {formatTemp(feels_like)}
+                                    
                                 </p>
                             </div>
                             <div className="flex gap-2 font-medium text-sm">
